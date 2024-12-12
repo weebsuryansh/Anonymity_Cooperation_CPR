@@ -1,0 +1,27 @@
+{{ block title }}
+INTRODUCTION
+{{ endblock }}
+{{ block content }}
+    <h2>
+        WELCOME TO OUR LAB EXPERIMENT!!!
+    </h2>
+    <h6>
+        {{ group_type }}
+    </h6>
+    <hr>
+    <br>
+    <h4>
+        TODAY YOU'LL BE TEAMED UP WITH {{ group_size }} PLAYER/S
+    </h4>
+    <img src="{{ static 'group.png' }}" alt="group" height="400" width="640">
+    <br>
+    <br>
+    <h4>
+        AND YOUR WORK IS TO MINE COAL!!!!!
+    </h4>
+    <img src="{{ static 'coal.png' }}" alt="group" height="400" width="640">
+
+    {{ formfields }}
+    {{ next_button }}
+
+{{ endblock }}

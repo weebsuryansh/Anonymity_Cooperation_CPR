@@ -1,0 +1,57 @@
+
+
+{{ block title }}
+INSTRUCTIONS
+{{ endblock }}
+{{ block content }}
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <h5>
+        COST OF COAL EXTRACTION IS DETERMINED BY THE FOLLOWING FUNCTION:
+    </h5>
+    \[
+    COST = COST\_MULTIPLIER\cdot\left( \frac{YOUR\_EXTRACTION\cdot TOTAL\_EXTRACTION}{AVAILABLE\_RESOURCES}\right)
+    \]
+    WHERE,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;COST_MULTIPLIER = {{ multiplier }} INR<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;AVAILABLE_RESOURCES = {{ amount_coal }}<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;YOUR_EXTRACTION = COAL EXTRACTED BY YOU<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;TOTAL_EXTRACTION = COAL EXTRACTED BY THE WHOLE GROUP
+    <br>
+    <br>
+    <h4>
+        COST WILL OFCOURSE BE DEDUCTED FROM THE PRICE OF COAL EXTRACTED AND HENCE, YOUR PAYOFF WILL BE DETERMINED AS FOLLOWS:
+    </h4>
+    \[
+    PAYOFF = YOUR\_EXTRACTION\cdot PRICE - COST
+    \]
+    WHERE,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;COST_MULTIPLIER = {{ multiplier }} INR<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;AVAILABLE_RESOURCES = {{ amount_coal }}<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;YOUR_EXTRACTION = COAL EXTRACTED BY YOU<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;TOTAL_EXTRACTION = COAL EXTRACTED BY THE WHOLE GROUP<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;PRICE = {{ payoff }} INR
+    <br>
+    <br>
+    <h4>
+        IF WE CONSIDER ALL 10 PLAYERS EXTRACT EQUAL AMOUNT OF COAL, THE PAYOFF VS EXTRACTION GRAPH WILL LOOK AS FOLLOWS:
+    </h4>
+    <img src="{{ static 'payoff_extraction.png' }}" alt="group" height="400" width="640">
+    <br>
+    <br>
+    <h4>
+        YOU CAN ONLY EXTRACT UPTO {{ max_extraction }} TO PREVENT HOARDING OF RESOURCES!!! YOU CAN EITHER DECIDE TO COOPERATE WITH OTHERS TO KEEP TOTAL EXTRACTION LOW TO MAXIMISE PAYOFF OR ACT SELFISHLY. IT IS UPTO YOU TO DECIDE.
+    </h4>
+    <br>
+    <br>
+    <h4>
+        NOTE: EXTRACTIONS FROM ALL THE PLAYERS WILL BE ANONYMOUS AND YOU WON'T BE ABLE TO INTERACT WITH THEM DURING THE WHOLE GAME UNLESS STATED OTHERWISE.
+    </h4>
+    <br>
+    <br>
+    <h4>
+        GOOD LUCK!!!!!!!
+    </h4>
+    <hr>
+    {{ next_button }}
+
+{{ endblock }}

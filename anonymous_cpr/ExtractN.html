@@ -1,0 +1,26 @@
+{{ block title }}
+   EXTRACTION
+{{ endblock }}
+{{ block content }}
+
+    <h3>
+        CURRENT STATS
+    </h3>
+
+    <p>
+        Round number: {{ player.round_number }} <br>
+        Remaining coal: {{ remaining_coal }} <br>
+        Extracted coal: {{ extracted_coal }} <br>
+    </p>
+
+    <h5>
+        ENTER THE AMOUNT OF COAL TO BE MINED
+    </h5>
+    {{ formfields }}
+
+    <h3>CHATROOM</h3>
+    {{ chat nickname=player.username channel=group.id_in_subsession }}
+
+    {{ next_button }}
+
+{{ endblock }}

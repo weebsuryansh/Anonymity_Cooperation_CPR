@@ -1,0 +1,20 @@
+{{ block title }}
+EXTRA IMPORTANT INFORMATION
+{{ endblock }}
+{{ block content }}
+    <h4>
+        YOU WILL BE ABLE TO SEE HOW MUCH COAL EVERY PERSON MINED FROM YOUR GROUP WHEN THE ROUND ENDS. THIS ALSO MEANS
+        OTHERS WILL ALSO BE ABLE TO SEE HOW MUCH COAL YOU MINED DURING THE ROUND.
+        [THIS INFORMATION OVERRIDES ANY CONTRADICTORY INFORMATION GIVEN BEFORE.]
+    </h4>
+    <hr>
+    <h3>
+        EXAMPLE:
+    </h3>
+    <img src="{{ static 'rankings.png' }}" alt="group" height="150" width="440">
+    <br>
+    <br>
+    <hr>
+    {{ next_button }}
+
+{{ endblock }}

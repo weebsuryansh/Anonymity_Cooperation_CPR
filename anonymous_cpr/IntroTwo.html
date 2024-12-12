@@ -1,0 +1,24 @@
+{{ block title }}
+INSTRUCTIONS
+{{ endblock }}
+{{ block content }}
+    <h4>
+        FOR EACH COAL MINED YOU WILL BE REWARDED WITH {{ payoff }}INR.
+    </h4>
+    <img src="{{ static 'payoff.png' }}" alt="group" height="400" width="640">
+    <br>
+    <br>
+    <h4>
+        BUT AS YOU CAN SEE COAL IN OUR WORLD IS LIMITED AND YOUR GROUP STARTS WITH ONLY {{ amount_coal }} COAL.
+    </h4>
+    <img src="{{ static 'world_coal.png' }}" alt="group" height="400" width="640">
+    <br>
+    <br>
+    <h4>
+        HENCE, AS THE COAL RUNS OUT IT BECOMES MUCH HARDER AND MORE EXPENSIVE TO MINE THE REMAINING COAL!! WHILE THE REWARD PER COAL REMAINS THE SAME
+    </h4>
+    <br>
+    <hr>
+    {{ next_button }}
+
+{{ endblock }}

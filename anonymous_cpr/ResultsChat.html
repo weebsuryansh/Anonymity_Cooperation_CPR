@@ -1,0 +1,24 @@
+{{ block title }}
+    RESULTS
+{{ endblock }}
+
+{{ block content }}
+    <h3>Results of this round</h3>
+    <p>
+        Your extraction for this round was <strong>{{ extraction }}</strong> <br>
+        Your payoff for this round is <strong>{{ payoff }}</strong>. <br>
+        Cost you had to bear this round is <strong>{{ cost }}</strong>. <br>
+        Total coal extracted this round is <strong>{{ extracted_coal }}</strong>. <br>
+        Remaining coal is <strong>{{ remaining_coal }}</strong>. <br>
+    </p>
+    <h3>CHATROOM</h3>
+    {{ chat nickname=player.username channel=group.id_in_subsession }}
+
+    <hr>
+    <h3>
+        THANK YOU FOR PLAYING!!!!
+    </h3>
+
+{{ endblock }}
+
+
